@@ -28,7 +28,6 @@ sysbench $SCRIPT \
   --tables=$TABLES \
   --table-size=$TABLE_SIZE \
   --threads=$THREADS \
-
   prepare
 
 # Запуск теста
