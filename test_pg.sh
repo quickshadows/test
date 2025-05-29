@@ -19,13 +19,12 @@ OUTPUT_FILE="susbanch_$MYSQL_HOST.txt"
 # Подготовка
 echo $MYSQL_HOST
 echo "🔧 Подготовка данных..."
-sysbench $SCRIPT \
-  --db-driver=pgsql \
-  --mysql-host=$MYSQL_HOST \
-  --mysql-port=$MYSQL_PORT \
-  --mysql-user=$MYSQL_USER \
-  --mysql-password=$MYSQL_PASSWORD \
-  --mysql-db=$MYSQL_DB \
+sysbench --db-driver=pgsql $SCRIPT \
+  --pgsql-host=$PGSQL_HOST \
+  --pgsql-port=$PGSQL_PORT \
+  --pgsql-user=$PGSQL_USER \
+  --pgsql-password=$PGSQL_PASSWORD \
+  --pgsql-db=$PGSQL_DB \
   --tables=$TABLES \
   --table-size=$TABLE_SIZE \
   --threads=$THREADS \
@@ -33,13 +32,12 @@ sysbench $SCRIPT \
 
 # Запуск теста
 echo "🚀 Запуск теста..."
-sysbench $SCRIPT \
-  --db-driver=pgsql \
-  --mysql-host=$MYSQL_HOST \
-  --mysql-port=$MYSQL_PORT \
-  --mysql-user=$MYSQL_USER \
-  --mysql-password=$MYSQL_PASSWORD \
-  --mysql-db=$MYSQL_DB \
+sysbench --db-driver=pgsql $SCRIPT \
+  --pgsql-host=$PGSQL_HOST \
+  --pgsql-port=$PGSQL_PORT \
+  --pgsql-user=$PGSQL_USER \
+  --pgsql-password=$PGSQL_PASSWORD \
+  --pgsql-db=$PGSQL_DB \
   --tables=$TABLES \
   --table-size=$TABLE_SIZE \
   --threads=$THREADS \
@@ -48,13 +46,12 @@ sysbench $SCRIPT \
 
 # Очистка
 echo "🧹 Очистка данных..."
-sysbench $SCRIPT \
-  --db-driver=pgsql \
-  --mysql-host=$MYSQL_HOST \
-  --mysql-port=$MYSQL_PORT \
-  --mysql-user=$MYSQL_USER \
-  --mysql-password=$MYSQL_PASSWORD \
-  --mysql-db=$MYSQL_DB \
+sysbench --db-driver=pgsql $SCRIPT \
+  --pgsql-host=$PGSQL_HOST \
+  --pgsql-port=$PGSQL_PORT \
+  --pgsql-user=$PGSQL_USER \
+  --pgsql-password=$PGSQL_PASSWORD \
+  --pgsql-db=$PGSQL_DB \
   --tables=$TABLES \
   --table-size=$TABLE_SIZE \
   --threads=$THREADS \
