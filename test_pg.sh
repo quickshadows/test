@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Настройки подключения
-MYSQL_HOST=$1
-MYSQL_PORT=3306
-MYSQL_USER="gen_user"
-MYSQL_PASSWORD='joaFWafw*1111122'
-MYSQL_DB="default_db"
+PGSQL_HOST=$1
+PGSQL_PORT=5432
+PGSQL_USER="gen_user"
+PGSQL_PASSWORD='joaFWafw*1111122'
+PGSQL_DB="default_db"
 
 # Параметры теста
 TABLES=10
@@ -14,10 +14,10 @@ THREADS=10
 DURATION=300
 SCRIPT="/usr/share/sysbench/oltp_read_write.lua"
 
-OUTPUT_FILE="susbanch_$MYSQL_HOST.txt"
+OUTPUT_FILE="susbanch_$PGSQL_HOST.txt"
 
 # Подготовка
-echo $MYSQL_HOST
+echo $PGSQL_HOST
 echo "🔧 Подготовка данных..."
 sysbench --db-driver=pgsql $SCRIPT \
   --pgsql-host=$PGSQL_HOST \
