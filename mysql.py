@@ -16,9 +16,6 @@ stdout = statistika.stdout
 return_code = statistika.returncode
 
 print("Код возврата:", return_code)
-print(stdout)
-# Путь к файлу со статистикой
-#file_path = "stats.txt"
 
 # Функция парсинга статистики
 def parse_sql_stats(text):
