@@ -9,7 +9,7 @@ MYSQL_DB="default_db"
 
 # Параметры теста
 TABLES=10
-TABLE_SIZE=10000
+TABLE_SIZE=100000
 THREADS=10   
 DURATION=300
 SCRIPT="/usr/share/sysbench/oltp_read_write.lua"
